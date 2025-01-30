@@ -7,7 +7,7 @@ Install torch (>=1.8.0) and run the following commands
 ```python
 import algorithms_MoFO
 
-optimizer = algorithms.AdamW_MoFO(
+optimizer = algorithms_MoFO.AdamW_MoFO(
         model = model, lr=learning_rate, weight_decay=weight_decay,fraction=MoFO_fraction)
 ```
 
