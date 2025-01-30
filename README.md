@@ -49,7 +49,7 @@ You can fine-tunine Llama-2-7B on the MetaMathQA dataset by running the followin
 ```bash
 conda activate llm1
 
-./open-instruct/scripts/finetune_metamathqa.sh
+./open-instruct-main/open-instruct/scripts/finetune_metamathqa.sh
 ```
 
 To be more specific:
@@ -78,13 +78,13 @@ We use [lm-eval](https://github.com/EleutherAI/lm-evaluation-harness) and './ope
 You can use the following script to download all the evaluation data in open-instruct database:
 
 ```bash
-./open-instruct/scripts/prepare_eval_data.sh
+./open-instruct-main/open-instruct/scripts/prepare_eval_data.sh
 ```
 
 You can run the following commands to eval `MMLU`, `CommenSense Reasoning`, `HumanEval`, `GSM8K`, (and `MedQ`, `ifeval` by using the commented-out sections)
 
 ```bash
-./open-instruct/scripts/eval/downstream_benckmark.sh
+./open-instruct-main/open-instruct/scripts/eval/downstream_benckmark.sh
 ```
 Note that you need to fill `path_of_fine-tuned_ckpt`, `path_where_you_want_to_save_evaluation`, and `path_of_save_eval_data` in the shell.
 
@@ -103,14 +103,14 @@ pip install -r requirements_llm2.txt
 ```
 
 run:
-You can fine-tunine Llama-2-7B-chat on the MetaMathQA dataset by using the commented-out sections of `./open-instruct/scripts/finetune_metamathqa.sh` with llm2.
+You can fine-tunine Llama-2-7B-chat on the MetaMathQA dataset by using the commented-out sections of `./open-instruct-main/open-instruct/scripts/finetune_metamathqa.sh` with llm2.
 
 
 You can fine-tunine Llama-2-7B-chat on the PMC-LLaMA-Instructions dataset by using the following commands:
 ```bash
 conda activate llm2
 
-./open-instruct/scripts/finetune_PMC.sh
+./open-instruct-main/open-instruct/scripts/finetune_PMC.sh
 ```
 * To enable MoFO in the fine-tuning, you can add the following option`--use_AdamW_MoFO`, `--MoFO_fraction 0.15`, (`MoFO_fraction=0.15` means 15% parameter with the highest momentum will be updated in each iteration.):
 
