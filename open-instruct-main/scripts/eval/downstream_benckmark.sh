@@ -9,7 +9,7 @@ path_where_you_want_to_save_evaluation
 )
 
 
-cd open-instruct
+cd open-instruct-main
 
 for i in "${!save_dirs[@]}"; do
   save_dir=${save_dirs[$i]}
